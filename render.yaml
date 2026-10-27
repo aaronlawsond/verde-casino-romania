@@ -2,7 +2,7 @@ services:
   - type: web
     name: verde-casino-romania
     runtime: static
-    buildCommand: "tar -xzf site.tar.gz"
+    buildCommand: "rm -rf public && tar -xzf site.tar.gz"
     staticPublishPath: public
     autoDeployTrigger: "off"
     headers:
