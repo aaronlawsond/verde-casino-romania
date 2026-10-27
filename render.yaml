@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: verde-casino-romania
+    runtime: static
+    buildCommand: "tar -xzf site.tar.gz"
+    staticPublishPath: public
+    autoDeployTrigger: "off"
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: no-referrer
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
