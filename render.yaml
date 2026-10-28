@@ -2,7 +2,7 @@ services:
   - type: web
     name: verde-casino-romania
     runtime: static
-    buildCommand: "rm -rf public && tar -xzf site.tar.gz && test -s public/images/social-card.webp"
+    buildCommand: "rm -rf public && tar -xzf site.tar.gz && test -s public/images/hero-verde.webp && test -s public/images/social-verde.webp"
     staticPublishPath: public
     autoDeployTrigger: "off"
     headers:
